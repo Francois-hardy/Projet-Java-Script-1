@@ -2,7 +2,7 @@
 HARDY François / FERRARINI Julian
 Premier jeu en JS, cours de M. BUFFA Michel
 
-Nom: XXXXXXX
+Nom: F1 Race
 
 Description du jeu:
     Une voiture pouvant se controler uniquement de gauche à droite est sur une route, vue du haut.
