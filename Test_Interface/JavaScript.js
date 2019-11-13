@@ -3,7 +3,7 @@ let canvas;
 let tableau;
 const rects = [];
 const tab = [];
-let start = 2;
+let start = 1;
 var pause = 0;
 let pv;
 let score;
@@ -49,8 +49,8 @@ function handleKeyup(evt) {
  }
 
  function lancerLeJeu(){
- 	if (start === 1) {
-        rects[0] = new Voiture(175,300,ctx,0.3);
+ 	if (start == 1) {
+        rects[0] = new Voiture(280,500,ctx,0.3);
       	requestAnimationFrame(anime60fps);
       	start = 0;
     }
@@ -90,9 +90,9 @@ function handleKeypress(evt) {
     switch(evt.keyCode){
         case 13:
         	//////////////////////////////// Lancer le jeu ////////////////////////// Start = 1
-        	start = 1;
+        	if(start == 1){
             lancerLeJeu();
-
+          }
             //////////////////////////////// Lance interface des niveaux ////////////////////////// Start = 2
           	//interfaceDesNiveaux();
           	break;
@@ -192,10 +192,10 @@ class Voiture {
   this.x += this.dx;
   this.score += 1;
   // j'ai pris un peu plus large que la route  
-  if(this.x + 10/this.taille >= route[68].xd ) {
+  if(this.x + 10/this.taille >= route[108].xd ) {
       this.pv -= 0.1;
   }
-  if(this.x - 3/this.taille <= route[68].xg ){
+  if(this.x - 3/this.taille <= route[108].xg ){
       this.pv -= 0.1;
   }
   
@@ -214,14 +214,14 @@ function init() {
   //context graphique
   ctx = canvas.getContext("2d");
   ctx.fillStyle = "white";
-  ctx.fillRect(0,0,400,400);
+  ctx.fillRect(0,0,600,600);
   ctx.font = "30pt Arial Black";
   ctx.fillStyle = "blue";
   ctx.strokeStyle = "black";
-  ctx.fillText("Pressez ENTRER", 10, 200);
-  ctx.strokeText("Pressez ENTRER", 10, 200);
-  ctx.fillText("pour commencer", 10, 230);
-  ctx.strokeText("pour commencer", 10, 230);
+  ctx.fillText("Pressez ENTRER", 120, 290);
+  ctx.strokeText("Pressez ENTRER", 120, 290);
+  ctx.fillText("pour commencer", 120, 340);
+  ctx.strokeText("pour commencer", 120, 340);
   creerTableauRoute();
   creerTableauChemin();
   creerTableauSol();
@@ -267,7 +267,7 @@ function anime60fps() {
     ctx.font = "15pt Arial Black";
     ctx.fillStyle = "blue";
     ctx.strokeStyle = "black";
-    ctx.fillText("Score: "+rects[0].score,0, 400);
+    ctx.fillText("Score: "+rects[0].score,10, 590);
     
     /* //////////////// Changement de la route //////////////////////////
     // Changer la direction du chemin par rapport au score
@@ -320,15 +320,15 @@ function anime60fps() {
     ctx.fillText("Perdu", canvas.width/3.2, canvas.height/2);
     ctx.strokeText("Perdu", canvas.width/3.2, canvas.height/2);
     ctx.font = "20pt Arial Black";
-    ctx.fillText("Pressez ENTRER", 10, 300);
-    ctx.fillText("pour recommencer", 10, 350);
+    ctx.fillText("Pressez ENTRER", 10, 500);
+    ctx.fillText("pour recommencer", 10, 550);
     classement();
     tailleRectangles = 5;
     tailleChemin = 5;
     creerTableauRoute();
     creerTableauChemin();
     creerTableauSol();
-    xg = 150;
+    xg = 250;
     xd = xg + 100;
     start = 1;
     
@@ -375,9 +375,9 @@ function classement(){
 
 
 
-var xg = 150;
+var xg = 250;
 var xd = xg + 100;
-var xG = 155;
+var xG = 255;
 var xD = xg + 90;
 var yg = 0;
 var yd = 0;
@@ -413,7 +413,7 @@ function creerTableauRoute() {
   console.log("nb lignes : " + nbLignes)
   
   for(let i = 0; i < nbLignes; i++) {
-    route[i] = {xg:150, xd:250}
+    route[i] = {xg:250, xd:350}
   }
 }
 
@@ -444,7 +444,7 @@ function scrolleRoute() {
   //let First2 = chemin [0];
   //let newFirst2 = First2; 
   
-  if (xd > 395){
+  if (xd > 595){
     speed = 3;
   }
   if  (xg <= 5){
@@ -479,7 +479,7 @@ function creerTableauSol() {
   console.log("nb lignes : " + nbLignes)
   
   for(let i = 0; i < nbLignes; i++) {
-    sol[i] = {xg:148}
+    sol[i] = {xg:248}
   }
 }
 
@@ -529,7 +529,7 @@ function creerTableauChemin() {
   console.log("nb lignes : " + nbLignes)
   
   for(let i = 0; i < nbLignes; i++) {
-    chemin[i] = {xG:155, xD:245}
+    chemin[i] = {xG:255, xD:345}
   }
 } 
 
@@ -558,7 +558,7 @@ function scrolleChemin() {
   //let First2 = chemin [0];
   //let newFirst2 = First2; 
   
-  if (xD > 395){
+  if (xD > 595){
     speed = 2;
   }
   if  (xG <= 5){
