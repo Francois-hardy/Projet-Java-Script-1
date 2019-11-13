@@ -16,8 +16,13 @@ var w, h;
 
 window.addEventListener('keydown', handleKeydown, false);
 window.addEventListener('keyup', handleKeyup, false);
-window.addEventListener('keypress', handleKeypress, false);
+window.addEventListener('keydown', handleKeypress, false);
 
+var element = document.getElementById('clickme');
+
+element.onclick = function() {
+      alert("Vous m'avez cliqué !");
+};
 
 function handleKeydown(evt) {
     switch(evt.keyCode){
@@ -47,53 +52,60 @@ function handleKeyup(evt) {
     }
  }
 
+ function lancerLeJeu(){
+ 	if (start === 1) {
+        rects[0] = new Voiture(175,300,ctx,0.3);
+      	requestAnimationFrame(anime60fps);
+      	start = 0;
+    }
+ }
+
+function interfaceDesNiveaux(){
+	if (start === 2) {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.fillStyle = "white";
+		ctx.fillRect(0,0,400,400);
+		ctx.font = "30pt Arial Black";
+		ctx.fillStyle = "blue";
+		ctx.strokeStyle = "black";
+		ctx.fillText("Choisir le niveau", 15, 50);
+		ctx.strokeText("Choisir le niveau", 15, 50);
+		ctx.fillStyle = "red";
+		ctx.fillRect(25, 75, 150, 75);
+
+		ctx.fillStyle = "green";
+		ctx.fillRect(220, 75, 150, 75);
+		ctx.fillStyle = "blue";
+		ctx.fillRect(25, 175, 150, 75);
+		ctx.fillStyle = "grey";
+		ctx.fillRect(220, 175, 150, 75);
+		ctx.fillStyle = "black";
+		ctx.fillRect(25, 275, 150, 75);
+		ctx.fillStyle = "purple";
+		ctx.fillRect(220, 275, 150, 75);
+		start = 1;
+	}
+}
+
+
+
+
 function handleKeypress(evt) {
     switch(evt.keyCode){
         case 13:
-        //////////////////////////////// Lancer le jeu ////////////////////////// Start = 1
-          if (start == 1) {
-            rects[0] = new Voiture(175,300,ctx,0.3);
-            requestAnimationFrame(anime60fps);///////////////// Niveau 1 
-            start = 0;
-          }
-           //////////////////////////////// Lance interface des niveaux ////////////////////////// Start = 2
-          if (start == 2) {
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-				ctx.fillStyle = "white";
-				ctx.fillRect(0,0,400,400);
-			    ctx.font = "30pt Arial Black";
-				ctx.fillStyle = "blue";
-				ctx.strokeStyle = "black";
-				ctx.fillText("Choisir le niveau", 15, 50);
-				ctx.strokeText("Choisir le niveau", 15, 50);
-				ctx.fillStyle = "red";
-				ctx.fillRect(25, 75, 150, 75);
-				ctx.fillStyle = "green";
-				ctx.fillRect(220, 75, 150, 75);
-				ctx.fillStyle = "blue";
-				ctx.fillRect(25, 175, 150, 75);
-				ctx.fillStyle = "grey";
-				ctx.fillRect(220, 175, 150, 75);
-				ctx.fillStyle = "black";
-				ctx.fillRect(25, 275, 150, 75);
-				ctx.fillStyle = "purple";
-				ctx.fillRect(220, 275, 150, 75);
-				
-				switch(evt.keyCode){case 6:
-					console.log("test");
-					ctx.clearRect(0, 0, canvas.width, canvas.height);
-					ctx.fillStyle = "purple";
-					ctx.fillRect(20, 25, 50, 75);
-					break;
-				}
-				
+        	//////////////////////////////// Lancer le jeu ////////////////////////// Start = 1
 
-          }
-        break;
+            //////////////////////////////// Lance interface des niveaux ////////////////////////// Start = 2
+          	interfaceDesNiveaux();
+          	break;
 
+		case 65:
+			lancerLeJeu();
+			break;	
 
     }
- }
+}
+ 
  
 
 
