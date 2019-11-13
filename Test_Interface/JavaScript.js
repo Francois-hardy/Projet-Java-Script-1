@@ -357,8 +357,10 @@ function classement(){
     try {
        if (classementTab[2] < rects[0].score-1){
         ctx1.clearRect(0, 0, canvas.width, canvas.height);
-        classementTab[2] = rects[0].score-1;
-        classementTab.sort();
+        classementTab.pop();
+        classementTab.push(rects[0].score-1);
+        //classementTab[2] = rects[0].score-1;
+        classementTab = classementTab.sort();
         classementTab.reverse();
         ctx1.fillText("Classement", 32, 20);
         ctx1.fillText("1er : " + classementTab[0] ,10,50);
