@@ -1,4 +1,6 @@
 # Projet-Java-Script-1
+# New Branch Développement
+
 HARDY François / FERRARINI Julian
 Premier jeu en JS, cours de M. BUFFA Michel
 
