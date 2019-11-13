@@ -16,13 +16,9 @@ var w, h;
 
 window.addEventListener('keydown', handleKeydown, false);
 window.addEventListener('keyup', handleKeyup, false);
-window.addEventListener('keydown', handleKeypress, false);
+window.addEventListener('keypress', handleKeypress, false);
 
-var element = document.getElementById('clickme');
 
-element.onclick = function() {
-      alert("Vous m'avez cliqué !");
-};
 
 function handleKeydown(evt) {
     switch(evt.keyCode){
@@ -94,13 +90,15 @@ function handleKeypress(evt) {
     switch(evt.keyCode){
         case 13:
         	//////////////////////////////// Lancer le jeu ////////////////////////// Start = 1
+        	start = 1;
+            lancerLeJeu();
 
             //////////////////////////////// Lance interface des niveaux ////////////////////////// Start = 2
-          	interfaceDesNiveaux();
+          	//interfaceDesNiveaux();
           	break;
 
 		case 65:
-			lancerLeJeu();
+			//lancerLeJeu();
 			break;	
 
     }
@@ -136,6 +134,8 @@ class Voiture {
   }
   
   draw() {
+	ctx.save();
+
     ctx.fillStyle = "black";
     //Roue haut gauche
     ctx.fillRect(this.x, this.y, 30*this.taille, 40*this.taille);
@@ -182,7 +182,7 @@ class Voiture {
     //protege roue bas droit
     ctx.fillStyle = "darkgrey";
     ctx.fillRect(this.x+20*this.taille, this.y+110*this.taille, 60*this.taille, 20*this.taille);
-    
+    ctx.restore();
     
     
 
