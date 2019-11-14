@@ -194,14 +194,14 @@ class Voiture {
   // j'ai pris un peu plus large que la route  
   if(this.x + 10/this.taille >= route[108].xd ) {
       this.pv -= 0.1;
-      ctx.fillStyle = "red";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
+      ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+      ctx.fillRect(0,0,canvas.width, canvas.height);
       
   }
+  //document.getElementById("Canvas").style.background = "url('images/terrain.jpg') ";
   if(this.x - 3/this.taille <= route[108].xg ){
       this.pv -= 0.1;
-      ctx.fillStyle = "red";
+      ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
       ctx.fillRect(0,0,canvas.width, canvas.height);
   }
   
