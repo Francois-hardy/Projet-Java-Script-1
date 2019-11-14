@@ -7,7 +7,7 @@ let start = 1;
 var pause = 0;
 let pv;
 let score;
-var classementTab = [];
+var classementTab = [0,0,0];
 let ctx;
 let ctx1;
 
@@ -357,11 +357,13 @@ function classement(){
     try {
        if (classementTab[2] < rects[0].score-1){
         ctx1.clearRect(0, 0, canvas.width, canvas.height);
-        classementTab.pop();
-        classementTab.push(rects[0].score-1);
-        //classementTab[2] = rects[0].score-1;
-        classementTab = classementTab.sort();
+        //classementTab.pop();
+        //classementTab.push(rects[0].score-1);
+        const byValue = (a,b) => a - b;
+        classementTab[2] = rects[0].score-1;
+        classementTab.sort(byValue);
         classementTab.reverse();
+        console.log(classementTab); // [1,1,2,3,5,8,13,21]
         ctx1.fillText("Classement", 32, 20);
         ctx1.fillText("1er : " + classementTab[0] ,10,50);
         ctx1.fillText("2ème : " + classementTab[1],10,80);
