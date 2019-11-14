@@ -194,9 +194,15 @@ class Voiture {
   // j'ai pris un peu plus large que la route  
   if(this.x + 10/this.taille >= route[108].xd ) {
       this.pv -= 0.1;
+      ctx.fillStyle = "red";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      
   }
   if(this.x - 3/this.taille <= route[108].xg ){
       this.pv -= 0.1;
+      ctx.fillStyle = "red";
+      ctx.fillRect(0,0,canvas.width, canvas.height);
   }
   
   
@@ -314,14 +320,17 @@ function anime60fps() {
  
   if(rects[0].pv <= 0){
     //K = rects[0].score - 1;
+    ctx.fillStyle = "red";
+    ctx.fillRect(0,0,600,600);
     ctx.font = "45pt Arial Black";
     ctx.fillStyle = "blue";
     ctx.strokeStyle = "black";
-    ctx.fillText("Perdu", canvas.width/3.2, canvas.height/2);
-    ctx.strokeText("Perdu", canvas.width/3.2, canvas.height/2);
+    ctx.fillText("Perdu", canvas.width/3, canvas.height/2);
+    ctx.strokeText("Perdu", canvas.width/3, canvas.height/2);
     ctx.font = "20pt Arial Black";
     ctx.fillText("Pressez ENTRER", 10, 500);
     ctx.fillText("pour recommencer", 10, 550);
+    ctx.fillText("Votre Score: "+rects[0].score,canvas.width/3.6,  canvas.height/1.7);
     classement();
     tailleRectangles = 5;
     tailleChemin = 5;
