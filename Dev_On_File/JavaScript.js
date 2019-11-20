@@ -8,6 +8,10 @@ let ctx1;
 var w, h;
 
 function init() {
+  video = document.querySelector("#video");
+
+ video.play();
+
   
  
   canvas = document.querySelector("#Canvas");
