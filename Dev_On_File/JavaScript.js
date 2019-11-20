@@ -207,7 +207,11 @@ class Voiture {
 
 function init() {
   
- 
+ // On recup l'élément video
+ video = document.querySelector("#video");
+
+ video.play();
+
   canvas = document.querySelector("#Canvas");
   w = canvas.width;
   h = canvas.height;
@@ -249,12 +253,14 @@ function init() {
   //requestAnimationFrame(anime60fps);
 }
 
-//let K;
+
 
 
 /////////////////////////////////////////////// Niveau 1 ///////////////////////////////////////
 function anime60fps() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  //ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  
   drawRoute();
   drawChemin();
   drawSol();
