@@ -8,13 +8,6 @@ let ctx1;
 let lvl1;
 var w, h;
 
-
-
-/*
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
-*/
 function init() {
   
  
@@ -40,13 +33,4 @@ function init() {
   
   classement();
   
- 
-  //rects[0] = new Voiture(150,200,ctx);
-
-  //requestAnimationFrame(anime60fps);
 }
-
-//let K;
-
-
-/////////////////////////////////////////////// Niveau 1 ///////////////////////////////////////
