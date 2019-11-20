@@ -39,7 +39,7 @@ function  drawTableauRoute2() {
    
    for(let i = 0; i < route.length; i++) {
 	ctx.fillStyle = 'red';
-    ctx.fillRect(route[i].xg, i*10, 10, 10) ;
+    ctx.fillRect(route[i].xg, i*B, 10, 10) ;
     ctx.fillRect(route[i].xd, i*B, 10, 10) ;
   }
 }
@@ -74,12 +74,9 @@ function scrolleRoute2() {
   
   //console.log(speed);
   newFirst = {xg: xg , xd: xd};// ici de -2 à +2
-  //newFirst2 = {xg: xg , xd: xd}; 
 
   
   route.unshift(newFirst)
-  //chemin.unshift(newFirst2)
-    
 }
 
 //////////////////////////////////// SOL /////////////////////////
@@ -164,9 +161,6 @@ function scrolleChemin2() {
   let First2 = chemin [0];
   let newFirst2 = First2; 
   
-  //let First2 = chemin [0];
-  //let newFirst2 = First2; 
-  
   if (xD > 595){
     speed = 2;
   }
@@ -176,10 +170,9 @@ function scrolleChemin2() {
   xG = xg + 7;
   xD = xG + 190;
   
-  //newFirst = {xg: xg , xd: xd};// ici de -2 à +2
+  // ici de -2 à +2
   newFirst2 = {xG: xG , xD: xD}; 
 
-  //route.unshift(newFirst)
   chemin.unshift(newFirst2)
     
 }
