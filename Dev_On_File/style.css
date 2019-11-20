@@ -1,7 +1,14 @@
- #Canvas {
+#Canvas {
   border: 3px solid black;
   border-radius: 10px;
-  background-image:url("images/terrain.gif");
+
+}
+
+#video {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top:200px;
 }
 
   /*background-image:url("images/terrain.gif");*/
@@ -23,7 +30,4 @@ img{
 	height: auto;
 }
 
-#myVideo {
-	position : absolute;
 
-}
