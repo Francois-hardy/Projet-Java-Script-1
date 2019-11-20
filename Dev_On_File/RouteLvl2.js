@@ -39,7 +39,7 @@ function  drawTableauRoute2() {
    
    for(let i = 0; i < route.length; i++) {
 	ctx.fillStyle = 'red';
-    ctx.fillRect(route[i].xg, i*10, 10, 10) ;
+    ctx.fillRect(route[i].xg, i*B, 10, 10) ;
     ctx.fillRect(route[i].xd, i*B, 10, 10) ;
   }
 }
