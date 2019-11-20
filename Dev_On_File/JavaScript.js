@@ -5,7 +5,6 @@ var classementTab = [];
 let ctx;
 let ctx1;
 
-let lvl1;
 var w, h;
 
 function init() {

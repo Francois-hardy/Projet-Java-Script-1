@@ -1,14 +1,10 @@
-const rects = [];
-const tab = [];
 var pause = 0;
-let pv;
-let score;
 
-function anime60fps() {
+function anime60fps2() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawRoute();
-  drawChemin();
-  drawSol();
+  drawRoute2();
+  drawChemin2();
+  drawSol2();
   rects.map(r => {
     ctx.fillStyle = "red";
     ctx.fillRect(10,10,100,5);
@@ -79,17 +75,17 @@ function anime60fps() {
     classement();
     tailleRectangles = 5;
     tailleChemin = 5;
-    creerTableauRoute();
-    creerTableauChemin();
-    creerTableauSol();
-    xg = 250;
-    xd = xg + 100;
+    creerTableauRoute2();
+    creerTableauChemin2();
+    creerTableauSol2();
+    xg = 200;
+    xd = xg + 200;
     start = 1;
     
     
     }else if (pause === 0){
       
-    requestAnimationFrame(anime60fps);
+    requestAnimationFrame(anime60fps2);
     
   }
   else{
@@ -100,5 +96,3 @@ function anime60fps() {
   }
   });
 }
-
-

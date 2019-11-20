@@ -1,50 +1,52 @@
-var xg = 250;
-var xd = xg + 100;
-var xG = 255;
-var xD = xg + 90;
+var xg = 200;
+var xd = xg + 200;
+var xG = 205;
+var xD = xg + 190;
 var yg = 0;
 var yd = 0;
 //var largeurRoute = 200;
 var tailleRectangles = 5;
 var tailleChemin = 5;
-let B = 5;
 var route = [];
 var chemin = [];
 var sol = [];
-let LVL = 1;
+//let B = 5;
+
+
+
 
 ///////////////////  ROUTE /////////////////
-function drawRoute() {
+function drawRoute2() {
   ctx.save();
-  drawTableauRoute();
-  scrolleRoute();
+  drawTableauRoute2();
+  scrolleRoute2();
   ctx.restore();
   
 }
 
 ////////////////////////////// ROUTE ////////////////////////////
 
-function creerTableauRoute() {
+function creerTableauRoute2() {
   let nbLignes = h / tailleRectangles;
-  console.log("Route Ok avec NBLigne :" + nbLignes);
+  console.log("Route2 Ok avec NBLigne :" + nbLignes);
   
   for(let i = 0; i < nbLignes; i++) {
-    route[i] = {xg:250, xd:350}
+    route[i] = {xg:200, xd:400}
   }
 }
 
-function  drawTableauRoute() {
+function  drawTableauRoute2() {
    
    for(let i = 0; i < route.length; i++) {
 	ctx.fillStyle = 'red';
-    ctx.fillRect(route[i].xg, i*B, 10, 10) ;
+    ctx.fillRect(route[i].xg, i*10, 10, 10) ;
     ctx.fillRect(route[i].xd, i*B, 10, 10) ;
   }
 }
 
 var speed = 3;
 
-function scrolleRoute() {
+function scrolleRoute2() {
   // Ici on va supprimer le dernier élément de la route
   route.pop();
   //chemin.pop();
@@ -67,7 +69,7 @@ function scrolleRoute() {
     speed = 5;
   }
   xg += speed - Math.random()*8;
-  xd = xg + 100;
+  xd = xg + 200;
   
   
   //console.log(speed);
@@ -82,31 +84,31 @@ function scrolleRoute() {
 
 //////////////////////////////////// SOL /////////////////////////
 
-function drawSol() {
+function drawSol2() {
   ctx.save();
-  drawTableauSol();
-  scrolleSol();
+  drawTableauSol2();
+  scrolleSol2();
   ctx.restore();
   
 } 
 
-function creerTableauSol() {
+function creerTableauSol2() {
   let nbLignes = h / tailleRectangles;
-  console.log("Sol Ok avec NBLigne :" + nbLignes);
+  console.log("Sol2 Ok avec NBLigne :" + nbLignes);
   
   for(let i = 0; i < nbLignes; i++) {
-    sol[i] = {xg:248}
+    sol[i] = {xg:198}
   }
 }
 
-function  drawTableauSol() {
+function  drawTableauSol2() {
    ctx.fillStyle = 'lightgrey';
    for(let i = 0; i < sol.length; i++) {
-    ctx.fillRect(sol[i].xg + 12, B*i, 85, tailleRectangles) ;
+    ctx.fillRect(sol[i].xg + 12, B*i, 185, tailleRectangles) ;
   }
 }
 
-function scrolleSol() {
+function scrolleSol2() {
   // Ici on va supprimer le dernier élément de la route
   sol.pop();
   
@@ -124,25 +126,25 @@ function scrolleSol() {
 
 ///////////////////////////////// CHEMIN BLANC ////////////////////////////////
 
-function drawChemin() {
+function drawChemin2() {
   ctx.save();
-  drawTableauChemin();
-  scrolleChemin();
+  drawTableauChemin2();
+  scrolleChemin2();
   ctx.restore();
   
 } 
 
-function creerTableauChemin() {
+function creerTableauChemin2() {
   let nbLignes = h / tailleChemin;
-  console.log("Chemin Ok avec NBLigne :" + nbLignes);
+  console.log("Chemin2 Ok avec NBLigne :" + nbLignes);
   
   for(let i = 0; i < nbLignes; i++) {
-    chemin[i] = {xG:255, xD:345}
+    chemin[i] = {xG:205, xD:395}
   }
 } 
 
 
-function  drawTableauChemin() {
+function  drawTableauChemin2() {
    ctx.fillStyle = 'black';
    for(let i = 0; i < chemin.length; i++) {
     ctx.fillRect(chemin[i].xG, i*B, tailleChemin, tailleChemin) ;
@@ -150,7 +152,7 @@ function  drawTableauChemin() {
   }
 } 
 
-function scrolleChemin() {
+function scrolleChemin2() {
   // Ici on va supprimer le dernier élément de la route
   chemin.pop();
   //chemin.pop();
@@ -172,7 +174,7 @@ function scrolleChemin() {
     speed = 5;
   }
   xG = xg + 7;
-  xD = xG + 90;
+  xD = xG + 190;
   
   //newFirst = {xg: xg , xd: xd};// ici de -2 à +2
   newFirst2 = {xG: xG , xD: xD}; 
@@ -182,4 +184,4 @@ function scrolleChemin() {
     
 }
 
-console.log("LVL1 chargé");
+console.log("LVL2 chargé");
