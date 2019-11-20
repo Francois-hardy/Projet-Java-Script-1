@@ -11,9 +11,9 @@ var classementTab = [0,0,0];
 let ctx;
 let ctx1;
 
-let lvl1;
 var w, h;
 
+<<<<<<< HEAD
 window.addEventListener('keydown', handleKeydown, false);
 window.addEventListener('keyup', handleKeyup, false);
 window.addEventListener('keypress', handleKeypress, false);
@@ -205,6 +205,8 @@ class Voiture {
 }
 
 
+=======
+>>>>>>> Dev
 function init() {
   
  
@@ -243,6 +245,7 @@ function init() {
   
   classement();
   
+<<<<<<< HEAD
  
   //rects[0] = new Voiture(150,200,ctx);
 
@@ -581,3 +584,6 @@ function scrolleChemin() {
   chemin.unshift(newFirst2)
     
 }
+=======
+}
+>>>>>>> Dev

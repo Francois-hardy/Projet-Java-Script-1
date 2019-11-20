@@ -1,24 +1,18 @@
+start = 0;
+
 function Affichage(){
   ctx.fillStyle = "white";
   ctx.fillRect(0,0,600,600);
   ctx.font = "30pt Arial Black";
   ctx.fillStyle = "blue";
   ctx.strokeStyle = "black";
-  ctx.fillText("Pressez ENTRER", 120, 290);
-  ctx.strokeText("Pressez ENTRER", 120, 290);
+  ctx.fillText("Choisir votre LVL", 120, 290);
+  ctx.strokeText("Choisir votre LVL", 120, 290);
   ctx.fillText("pour commencer", 120, 340);
   ctx.strokeText("pour commencer", 120, 340);
   tailleRectangles = 5;
   tailleChemin = 5;
-  creerTableauRoute();
-  creerTableauChemin();
-  creerTableauSol();
-  xg = 250;
-  xd = xg + 100;
-  start = 1;
 }
-
-let i = 0;
 
 function Affichagelvl1(){
   
@@ -44,7 +38,9 @@ function Affichagelvl1(){
   xg = 250;
   xd = xg + 100;
   start = 1;
-  i= 2;
+  LVL = 1;
+
+  console.log("Vous avez lancé le lvl " + LVL);
   
 }
 function Affichagelvl2(){
@@ -65,14 +61,14 @@ function Affichagelvl2(){
   ctx.strokeText("pour commencer", 120, 340);
   tailleRectangles = 5;
   tailleChemin = 5;
-  creerTableauRoute();
-  creerTableauChemin();
-  creerTableauSol();
-  xg = 250;
-  xd = xg + 100;
+  creerTableauRoute2();
+  creerTableauChemin2();
+  creerTableauSol2();
+  xg = 200;
+  xd = xg + 200;
   start = 1;
-  i= 3;
-  
+  LVL = 2;
+  console.log("Vous avez lancé le lvl " + LVL);
 }
 function Affichagelvl3(){
   
@@ -98,7 +94,7 @@ function Affichagelvl3(){
   xg = 250;
   xd = xg + 100;
   start = 1;
-  i= 4;
+  LVL = 3;
   
 }
 function Affichagelvl4(){
@@ -125,6 +121,6 @@ function Affichagelvl4(){
   xg = 250;
   xd = xg + 100;
   start = 1;
-  
+  LVL = 4; 
   
 }
