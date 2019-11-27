@@ -1,16 +1,21 @@
 function lancerLeJeu(){
     if (LVL == 1) {
         start = 1;
-       rects[0] = new Voiture(280,500,ctx,0.3);
-         requestAnimationFrame(anime60fps);
-         
-         start = 0;
+        rects[0] = new Voiture(280,500,ctx,0.3);
+        requestAnimationFrame(anime60fps);
+        start = 0;
    }
    if (LVL == 2) {
        start = 1 ;
-    rects[0] = new Voiture(280,500,ctx,0.3);
+      rects[0] = new Voiture(280,500,ctx,0.3);
       requestAnimationFrame(anime60fps2);
       start = 0;
+}
+    if (LVL == 3) {
+        start = 1 ;
+        rects[0] = new Voiture(280,500,ctx,0.3);
+        requestAnimationFrame(anime60fps3);
+        start = 0;
 }
 }
 
