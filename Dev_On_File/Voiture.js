@@ -66,6 +66,8 @@ class Voiture {
     
 
   }
+
+  /////// lvl 3 /////
   move() {
     
   this.x += this.dx;
@@ -84,7 +86,71 @@ class Voiture {
       ctx.fillRect(0,0,canvas.width, canvas.height);
   }
   
-  
+  //// LVL 1 ////
   }
+
+  move2() {
+    
+    this.x += this.dx;
+    this.score += 1;
+    // j'ai pris un peu plus large que la route  
+    if(this.x + 10/this.taille >= route2[108].xd ) {
+        this.pv -= 0.1;
+        ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+        ctx.fillRect(0,0,canvas.width, canvas.height);
+        
+    }
+    //document.getElementById("Canvas").style.background = "url('images/terrain.jpg') ";
+    if(this.x - 3/this.taille <= route2[108].xg ){
+        this.pv -= 0.1;
+        ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+        ctx.fillRect(0,0,canvas.width, canvas.height);
+    }
+    
+    
+    }
+//// LVL 2 /////
+    move3() {
+    
+      this.x += this.dx;
+      this.score += 1;
+      // j'ai pris un peu plus large que la route  
+      if(this.x + 10/this.taille >= route3[108].xd ) {
+          this.pv -= 0.1;
+          ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+          ctx.fillRect(0,0,canvas.width, canvas.height);
+          
+      }
+      //document.getElementById("Canvas").style.background = "url('images/terrain.jpg') ";
+      if(this.x - 3/this.taille <= route3[108].xg ){
+          this.pv -= 0.1;
+          ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+          ctx.fillRect(0,0,canvas.width, canvas.height);
+      }
+      
+      
+      }
+
+/////// LVL 4 /////
+      move4() {
+    
+        this.x += this.dx;
+        this.score += 1;
+        // j'ai pris un peu plus large que la route  
+        if(this.x + 10/this.taille >= route4[108].xd ) {
+            this.pv -= 0.1;
+            ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+            ctx.fillRect(0,0,canvas.width, canvas.height);
+            
+        }
+        //document.getElementById("Canvas").style.background = "url('images/terrain.jpg') ";
+        if(this.x - 3/this.taille <= route4[108].xg ){
+            this.pv -= 0.1;
+            ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+            ctx.fillRect(0,0,canvas.width, canvas.height);
+        }
+        
+        
+        }
 
 }

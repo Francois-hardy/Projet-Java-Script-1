@@ -116,12 +116,13 @@ function Affichagelvl4(){
   ctx.strokeText("pour commencer", 120, 340);
   tailleRectangles = 5;
   tailleChemin = 5;
-  creerTableauRoute();
-  creerTableauChemin();
-  creerTableauSol();
-  xg = 250;
-  xd = xg + 100;
+  creerTableauRoute4();
+  creerTableauChemin4();
+  creerTableauSol4();
+  xg = 270;
+  xd = xg + 60;
   start = 1;
-  LVL = 4; 
-  
+  LVL = 4;
+
+  console.log("Vous avez lancé le lvl 4");
 }

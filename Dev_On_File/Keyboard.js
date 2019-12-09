@@ -39,21 +39,25 @@ function handleKeyup(evt) {
             if(LVL == 1){
               Affichagelvl1();
               lancerLeJeu();
+              start = 0;
             }
             if(LVL == 2){
               Affichagelvl2();
               lancerLeJeu();
+              start = 0;
             }
             if(LVL == 3){
               Affichagelvl3();
               lancerLeJeu();
+              start = 0;
             }
             if(LVL == 4){
-              Affichagelvl2();
+              Affichagelvl4();
               lancerLeJeu();
+              start = 0;
             }
           }
-            //////////////////////////////// Lance interface des niveaux ////////////////////////// Start = 2
+            
           	//interfaceDesNiveaux();
           	break;
 

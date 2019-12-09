@@ -7,9 +7,9 @@ var yd = 0;
 //var largeurRoute = 200;
 var tailleRectangles = 5;
 var tailleChemin = 5;
-var route = [];
-var chemin = [];
-var sol = [];
+var route3 = [];
+var chemin3 = [];
+var sol3 = [];
 //let B = 5;
 
 
@@ -31,16 +31,16 @@ function creerTableauRoute3() {
   console.log("Route3 Ok avec NBLigne :" + nbLignes);
   
   for(let i = 0; i < nbLignes; i++) {
-    route[i] = {xg:225, xd:375}
+    route3[i] = {xg:225, xd:375}
   }
 }
 
 function  drawTableauRoute3() {
    
-   for(let i = 0; i < route.length; i++) {
+   for(let i = 0; i < route3.length; i++) {
 	ctx.fillStyle = 'red';
-    ctx.fillRect(route[i].xg, i*B, 10, 10) ;
-    ctx.fillRect(route[i].xd, i*B, 10, 10) ;
+    ctx.fillRect(route3[i].xg, i*B, 10, 10) ;
+    ctx.fillRect(route3[i].xd, i*B, 10, 10) ;
   }
 }
 
@@ -48,7 +48,7 @@ var speed = 3;
 
 function scrolleRoute3() {
   // Ici on va supprimer le dernier élément de la route
-  route.pop();
+  route3.pop();
   //chemin.pop();
   
 
@@ -56,7 +56,7 @@ function scrolleRoute3() {
   // on prend le premier élément et on le déplace un peu
   // on va ajouter un déplacement random à gauche ou à droite de + ou - 
   // un certain incrément
-  let First = route [0];
+  let First = route3 [0];
   let newFirst = First; 
   
   //let First2 = chemin [0];
@@ -76,7 +76,7 @@ function scrolleRoute3() {
   newFirst = {xg: xg , xd: xd};// ici de -2 à +2
 
   
-  route.unshift(newFirst)
+  route3.unshift(newFirst)
 }
 
 //////////////////////////////////// SOL /////////////////////////
@@ -94,22 +94,22 @@ function creerTableauSol3() {
   console.log("Sol3 Ok avec NBLigne :" + nbLignes);
   
   for(let i = 0; i < nbLignes; i++) {
-    sol[i] = {xg:223}
+    sol3[i] = {xg:223}
   }
 }
 
 function  drawTableauSol3() {
    ctx.fillStyle = 'lightgrey';
-   for(let i = 0; i < sol.length; i++) {
-    ctx.fillRect(sol[i].xg + 12, B*i, 135, tailleRectangles) ;
+   for(let i = 0; i < sol3.length; i++) {
+    ctx.fillRect(sol3[i].xg + 12, B*i, 135, tailleRectangles) ;
   }
 }
 
 function scrolleSol3() {
   // Ici on va supprimer le dernier élément de la route
-  sol.pop();
+  sol3.pop();
   
-  let First3 = sol [0];
+  let First3 = sol3 [0];
   let newFirst3 = First3; 
     
   //newFirst = {xg: xg , xd: xd};// ici de -2 à +2
@@ -117,7 +117,7 @@ function scrolleSol3() {
 
   
   //route.unshift(newFirst)
-  sol.unshift(newFirst3)
+  sol3.unshift(newFirst3)
     
 }
 
@@ -136,29 +136,29 @@ function creerTableauChemin3() {
   console.log("Chemin3 Ok avec NBLigne :" + nbLignes);
   
   for(let i = 0; i < nbLignes; i++) {
-    chemin[i] = {xG:230, xD:370}
+    chemin3[i] = {xG:230, xD:370}
   }
 } 
 
 
 function  drawTableauChemin3() {
    ctx.fillStyle = 'black';
-   for(let i = 0; i < chemin.length; i++) {
-    ctx.fillRect(chemin[i].xG, i*B, tailleChemin, tailleChemin) ;
-    ctx.fillRect(chemin[i].xD, i*B, tailleChemin, tailleChemin) ;
+   for(let i = 0; i < chemin3.length; i++) {
+    ctx.fillRect(chemin3[i].xG, i*B, tailleChemin, tailleChemin) ;
+    ctx.fillRect(chemin3[i].xD, i*B, tailleChemin, tailleChemin) ;
   }
 } 
 
 function scrolleChemin3() {
   // Ici on va supprimer le dernier élément de la route
-  chemin.pop();
+  chemin3.pop();
   //chemin.pop();
   
   // On va en ajouter un au début
   // on prend le premier élément et on le déplace un peu
   // on va ajouter un déplacement random à gauche ou à droite de + ou - 
   // un certain incrément
-  let First2 = chemin [0];
+  let First2 = chemin3 [0];
   let newFirst2 = First2; 
   
   if (xD > 595){
@@ -173,7 +173,7 @@ function scrolleChemin3() {
   // ici de -2 à +2
   newFirst2 = {xG: xG , xD: xD}; 
 
-  chemin.unshift(newFirst2)
+  chemin3.unshift(newFirst2)
     
 }
 

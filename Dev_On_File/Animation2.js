@@ -55,7 +55,7 @@ function anime60fps2() {
     ctx.fillText(pv.toFixed(2)*10+"%", 120, 20);
 
     
-    r.move();
+    r.move2();
     r.draw();
     
  

@@ -1,10 +1,10 @@
 var pause = 0;
 
-function anime60fps3() {
+function anime60fps4() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawRoute3();
-  drawChemin3();
-  drawSol3();
+  drawRoute4();
+  drawChemin4();
+  drawSol4();
   rects.map(r => {
     ctx.fillStyle = "red";
     ctx.fillRect(10,10,100,5);
@@ -55,7 +55,7 @@ function anime60fps3() {
     ctx.fillText(pv.toFixed(2)*10+"%", 120, 20);
 
     
-    r.move3();
+    r.move4();
     r.draw();
     
  
@@ -75,17 +75,17 @@ function anime60fps3() {
     classement();
     tailleRectangles = 5;
     tailleChemin = 5;
-    creerTableauRoute3();
-    creerTableauChemin3();
-    creerTableauSol3();
-    xg = 225;
-    xd = xg + 125;
+    creerTableauRoute4();
+    creerTableauChemin4();
+    creerTableauSol4();
+    xg = 270;
+    xd = xg + 60;
     start = 1;
     
     
     }else if (pause === 0){
       
-    requestAnimationFrame(anime60fps3);
+    requestAnimationFrame(anime60fps4);
     
   }
   else{
@@ -96,3 +96,4 @@ function anime60fps3() {
   }
   });
 }
+
