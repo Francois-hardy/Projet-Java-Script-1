@@ -34,11 +34,17 @@ function creerTableauRoute() {
 }
 
 function  drawTableauRoute() {
-   
+
+  var Cheminpng = document.getElementById('Cheminpng');
+  var Chemin2png = document.getElementById('Chemin2png');
+
    for(let i = 0; i < route.length; i++) {
-	ctx.fillStyle = 'red';
-    ctx.fillRect(route[i].xg, i*B, 10, 10) ;
-    ctx.fillRect(route[i].xd, i*B, 10, 10) ;
+     
+  //ctx.fillStyle = zozor.src;
+
+ 
+    ctx.drawImage(Cheminpng, route[i].xg, i*B, 10, 10) ;
+    ctx.drawImage(Chemin2png, route[i].xd, i*B, 10, 10) ;
   }
 }
 
@@ -100,9 +106,9 @@ function creerTableauSol() {
 }
 
 function  drawTableauSol() {
-   ctx.fillStyle = 'lightgrey';
+  var Solpng = document.getElementById('Solpng');
    for(let i = 0; i < sol.length; i++) {
-    ctx.fillRect(sol[i].xg + 12, B*i, 85, tailleRectangles) ;
+    ctx.drawImage(Solpng,sol[i].xg + 12, B*i, 85, tailleRectangles) ;
   }
 }
 
@@ -113,10 +119,10 @@ function scrolleSol() {
   let First3 = sol [0];
   let newFirst3 = First3; 
     
+  
   //newFirst = {xg: xg , xd: xd};// ici de -2 à +2
   newFirst3 = {xg: xg}; 
 
-  
   //route.unshift(newFirst)
   sol.unshift(newFirst3)
     
@@ -143,7 +149,7 @@ function creerTableauChemin() {
 
 
 function  drawTableauChemin() {
-   ctx.fillStyle = 'black';
+   ctx.fillStyle = 'white';
    for(let i = 0; i < chemin.length; i++) {
     ctx.fillRect(chemin[i].xG, i*B, tailleChemin, tailleChemin) ;
     ctx.fillRect(chemin[i].xD, i*B, tailleChemin, tailleChemin) ;
