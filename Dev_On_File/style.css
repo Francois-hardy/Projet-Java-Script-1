@@ -29,5 +29,26 @@ img{
 	width: 25%;
 	height: auto;
 }
+ul {
+  list-style-type: none;
+  margin-bottom: 10;
+  padding-left: 40%;
+  overflow: hidden;
+  background-color: rgb(133, 133, 133);
+  border-radius: 10px;
+}
+
+li {
+  float: left;
+}
+
+li button {
+  display: block;
+  color: Black;
+  text-align: center;
+  padding: 14px 15px;
+  margin-right: 5px;
+  text-decoration: none;
+}
 
 
