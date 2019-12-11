@@ -18,18 +18,7 @@ function init() {
   h = canvas.height;
   //context graphique
   ctx = canvas.getContext("2d");
-  ctx.fillStyle = "white";
-  ctx.fillRect(0,0,600,600);
-  ctx.font = "30pt Arial Black";
-  ctx.fillStyle = "blue";
-  ctx.strokeStyle = "black";
-  ctx.fillText("Pressez ENTRER", 120, 290);
-  ctx.strokeText("Pressez ENTRER", 120, 290);
-  ctx.fillText("pour commencer", 120, 340);
-  ctx.strokeText("pour commencer", 120, 340);
-  creerTableauRoute();
-  creerTableauChemin();
-  creerTableauSol();
+  Affichage();
   
    
   tableau = document.querySelector("#Tableau");
