@@ -11,7 +11,6 @@ let B = 5;
 var route = [];
 var chemin = [];
 var sol = [];
-let LVL = 1;
 
 ///////////////////  ROUTE /////////////////
 function drawRoute() {
