@@ -4,13 +4,17 @@ let tableau;
 var classementTab = [];
 let ctx;
 let ctx1;
-
+video = document.querySelector("#video");
 var w, h;
 
 function init() {
   
+  
+
+ 
  
   canvas = document.querySelector("#Canvas");
+  video.play();
   w = canvas.width;
   h = canvas.height;
   //context graphique
