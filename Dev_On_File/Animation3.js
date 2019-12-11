@@ -31,13 +31,14 @@ function anime60fps3() {
     if (rects[0].score == 1000){
       speed = speed - 2;
     }
+
     if (rects[0].score == 1500){
-      speed = speed - 3;
+    speed = speed - 3;
     }
     if (rects[0].score == 2000){
       speed = speed + 4;
     }
-    if (rects[0].score == 2100){
+    if (rects[0].score == 2100){        
       speed = speed - 1;
     }
     if (rects[0].score == 2200){

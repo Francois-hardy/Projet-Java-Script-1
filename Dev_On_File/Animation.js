@@ -1,10 +1,6 @@
-const rects = [];
-const tab = [];
 var pause = 0;
-let pv;
-let score;
 
-$(function() {
+(function() {
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
   //var video = document.getElementById('video');
