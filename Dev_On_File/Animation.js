@@ -1,23 +1,7 @@
 var pause = 0;
 
-(function() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
-  //var video = document.getElementById('video');
-
-  video.addEventListener('play', function() {
-    var $this = this; //cache
-    (function loop() {
-      if (!$this.paused && !$this.ended) {
-        ctx.drawImage($this, 0, 0);
-        setTimeout(loop, 1000 / 30); // drawing at 30fps
-      }
-    })();
-  }, 0);
-});
-
 function anime60fps() {
-  //ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   drawRoute();
   drawChemin();
   drawSol();
@@ -112,5 +96,3 @@ function anime60fps() {
   }
   });
 }
-
-
