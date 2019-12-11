@@ -1,14 +1,7 @@
 #Canvas {
   border: 3px solid black;
   border-radius: 10px;
-
-}
-
-#video {
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  top:200px;
+  background-image:url("images/terrain.png");*/
 }
 
   /*background-image:url("images/terrain.gif");*/
@@ -20,11 +13,8 @@
   background-color: lightgrey;
   margin-left: 20px;
 }
-/*
-#BACK{
-  background-image:url("car.gif");
-}
-*/
+
+
 img{
 	width: 25%;
 	height: auto;

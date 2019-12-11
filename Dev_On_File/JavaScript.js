@@ -10,16 +10,9 @@ let score;
 var classementTab = [0,0,0];
 let ctx;
 let ctx1;
-
 var w, h;
 
 function init() {
-  
- // On recup l'élément video
- //video = document.querySelector("#video");
-
- //video.play();
-
   canvas = document.querySelector("#Canvas");
   w = canvas.width;
   h = canvas.height;
