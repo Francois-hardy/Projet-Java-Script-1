@@ -1,7 +1,13 @@
 window.onload = init;
 let canvas;
 let tableau;
-var classementTab = [];
+const rects = [];
+const tab = [];
+let start = 1;
+var pause = 0;
+let pv;
+let score;
+var classementTab = [0,0,0];
 let ctx;
 let ctx1;
 
@@ -9,13 +15,30 @@ var w, h;
 
 function init() {
   
- 
+ // On recup l'élément video
+ video = document.querySelector("#video");
+
+ video.play();
+
   canvas = document.querySelector("#Canvas");
   w = canvas.width;
   h = canvas.height;
   //context graphique
   ctx = canvas.getContext("2d");
-  Affichage();   
+  ctx.fillStyle = "white";
+  ctx.fillRect(0,0,600,600);
+  ctx.font = "30pt Arial Black";
+  ctx.fillStyle = "blue";
+  ctx.strokeStyle = "black";
+  ctx.fillText("Pressez ENTRER", 120, 290);
+  ctx.strokeText("Pressez ENTRER", 120, 290);
+  ctx.fillText("pour commencer", 120, 340);
+  ctx.strokeText("pour commencer", 120, 340);
+  creerTableauRoute();
+  creerTableauChemin();
+  creerTableauSol();
+  
+   
   tableau = document.querySelector("#Tableau");
   w1 = tableau.width;
   h1 = tableau.height;
