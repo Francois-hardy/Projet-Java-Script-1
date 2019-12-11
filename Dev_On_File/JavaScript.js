@@ -204,6 +204,7 @@ class Voiture {
 
 }
 
+var audio = new Audio('sons/voiture.mp3');
 
 function init() {
   
@@ -211,6 +212,11 @@ function init() {
  video = document.querySelector("#video");
 
  video.play();
+
+
+  
+
+
 
   canvas = document.querySelector("#Canvas");
   w = canvas.width;
@@ -260,7 +266,8 @@ function init() {
 function anime60fps() {
   //ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-  
+
+  audio.play();
   drawRoute();
   drawChemin();
   drawSol();
