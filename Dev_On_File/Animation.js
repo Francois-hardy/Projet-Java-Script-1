@@ -7,7 +7,7 @@ let score;
 $(function() {
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
-  var video = document.getElementById('video');
+  //var video = document.getElementById('video');
 
   video.addEventListener('play', function() {
     var $this = this; //cache
@@ -21,7 +21,7 @@ $(function() {
 });
 
 function anime60fps() {
-  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  //ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   drawRoute();
   drawChemin();
   drawSol();

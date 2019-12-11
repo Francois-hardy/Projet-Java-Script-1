@@ -16,9 +16,9 @@ var w, h;
 function init() {
   
  // On recup l'élément video
- video = document.querySelector("#video");
+ //video = document.querySelector("#video");
 
- video.play();
+ //video.play();
 
   canvas = document.querySelector("#Canvas");
   w = canvas.width;
