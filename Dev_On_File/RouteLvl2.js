@@ -36,11 +36,13 @@ function creerTableauRoute2() {
 }
 
 function  drawTableauRoute2() {
+  var Cheminpng = document.getElementById('Cheminpng');
+  var Chemin2png = document.getElementById('Chemin2png');
    
    for(let i = 0; i < route2.length; i++) {
 	ctx.fillStyle = 'red';
-    ctx.fillRect(route2[i].xg, i*B, 10, 10) ;
-    ctx.fillRect(route2[i].xd, i*B, 10, 10) ;
+    ctx.drawImage(Cheminpng,route2[i].xg, i*B, 10, 10) ;
+    ctx.drawImage(Chemin2png,route2[i].xd, i*B, 10, 10) ;
   }
 }
 
@@ -99,9 +101,9 @@ function creerTableauSol2() {
 }
 
 function  drawTableauSol2() {
-   ctx.fillStyle = 'lightgrey';
+  var Solpng = document.getElementById('Solpng');
    for(let i = 0; i < sol2.length; i++) {
-    ctx.fillRect(sol2[i].xg + 12, B*i, 185, tailleRectangles) ;
+    ctx.drawImage(Solpng,sol2[i].xg + 12, B*i, 185, tailleRectangles) ;
   }
 }
 
