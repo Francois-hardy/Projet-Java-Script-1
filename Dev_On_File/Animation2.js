@@ -1,7 +1,7 @@
 var pause = 0;
 
 function anime60fps2() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   drawRoute2();
   drawChemin2();
   drawSol2();
