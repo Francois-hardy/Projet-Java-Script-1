@@ -1,12 +1,8 @@
-#Canvas {
+ #Canvas {
   border: 3px solid black;
   border-radius: 10px;
-  background-image:url("images/terrain.png");
+  background-image:url("images/terrain.png");*/
 }
-
-  /*background-image:url("images/terrain.gif");*/
-
-
 
 #Tableau {
   border: 1px solid black;
@@ -40,5 +36,3 @@ li button {
   margin-right: 5px;
   text-decoration: none;
 }
-
-

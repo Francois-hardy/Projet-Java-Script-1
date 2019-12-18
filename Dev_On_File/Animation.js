@@ -1,7 +1,11 @@
+const rects = [];
+const tab = [];
 var pause = 0;
+let pv;
+let score;
 
 function anime60fps() {
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawRoute();
   drawChemin();
   drawSol();
@@ -96,3 +100,5 @@ function anime60fps() {
   }
   });
 }
+
+

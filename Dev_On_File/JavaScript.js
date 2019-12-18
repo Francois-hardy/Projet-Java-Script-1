@@ -1,13 +1,7 @@
 window.onload = init;
 let canvas;
 let tableau;
-const rects = [];
-const tab = [];
-let start = 1;
-var pause = 0;
-let pv;
-let score;
-var classementTab = [0,0,0];
+var classementTab = [];
 let ctx;
 let ctx1;
 var w, h;
@@ -18,9 +12,7 @@ function init() {
   h = canvas.height;
   //context graphique
   ctx = canvas.getContext("2d");
-  Affichage();
-  
-   
+  Affichage();   
   tableau = document.querySelector("#Tableau");
   w1 = tableau.width;
   h1 = tableau.height;

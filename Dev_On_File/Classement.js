@@ -10,11 +10,7 @@ function classement(){
         classementTab.pop();
         classementTab.push(rects[0].score-1);
         //classementTab[2] = rects[0].score-1;
-        tri_nombres(a,b) = a-b; 
-
-        classementTab.sort(tri_nombres);
-
-        //classementTab = classementTab.sort();
+        classementTab = classementTab.sort();
         classementTab.reverse();
         ctx1.fillText("Classement", 32, 20);
         ctx1.fillText("1er : " + classementTab[0] ,10,50);
