@@ -19,7 +19,7 @@ function lancerLeJeu(){
 }
     if (LVL == 4) {
       start = 1 ;
-      rects[0] = new Voiture(280,500,ctx,0.3);
+      rects[0] = new Voiture(280,500,ctx,0.2);
       requestAnimationFrame(anime60fps4);
       start = 0;
 }

@@ -6,11 +6,11 @@ window.addEventListener('keypress', handleKeypress, false);
 function handleKeydown(evt) {
     switch(evt.keyCode){
         case 37:
-        rects.forEach(item => item.dx = -3);
+        rects.forEach(item => item.dx = -5);
         //Voiture.rotate(45 * Math.PI / 180);
         break;
         case 39:
-        rects.forEach(item => item.dx = 3);
+        rects.forEach(item => item.dx = 5);
         break;
         case 80:
         pausefunc();
