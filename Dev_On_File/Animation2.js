@@ -72,7 +72,7 @@ function anime60fps2() {
     ctx.fillText("Pressez ENTRER", 10, 500);
     ctx.fillText("pour recommencer", 10, 550);
     ctx.fillText("Votre Score: "+rects[0].score,canvas.width/3.6,  canvas.height/1.7);
-    classement();
+    //classement();
     tailleRectangles = 5;
     tailleChemin = 5;
     creerTableauRoute2();

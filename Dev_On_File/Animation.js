@@ -5,7 +5,6 @@ let pv;
 let score;
 
 function anime60fps() {
-  console.log("test" + rects[0].pv);
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   drawRoute();
   drawChemin();
