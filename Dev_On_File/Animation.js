@@ -5,7 +5,7 @@ let pv;
 let score;
 
 function anime60fps() {
-  
+  console.log("test" + rects[0].pv);
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
   drawRoute();
   drawChemin();
@@ -63,7 +63,6 @@ function anime60fps() {
     r.move();
     r.draw();
     
- 
   if(rects[0].pv <= 0){
     //K = rects[0].score - 1;
     ctx.fillStyle = "red";

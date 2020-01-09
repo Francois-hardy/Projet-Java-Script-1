@@ -21,6 +21,13 @@ function drawRoute2() {
   drawTableauRoute2();
   scrolleRoute2();
   ctx.restore();
+  ctx1.fillText("Classement", 32, 20);
+  classementTab = [0, 0, 0];
+  ctx1.fillText("1er : " + classementTab[0] ,10,50);
+  ctx1.fillText("2ème : " + classementTab[1],10,80);
+  ctx1.fillText("3ème : " + classementTab[2],10,110);
+  
+  classement();
   
 }
 
