@@ -43,6 +43,97 @@ function anime60fps4() {
     if (rects[0].score == 2200){
       speed = speed - 2;
     }
+
+
+
+
+    if (rects[0].score == 2500){
+      speed = speed + 3;
+    }
+
+    if (rects[0].score == 2800){
+      speed = speed - 2;
+    }
+
+    if (rects[0].score == 3000){
+      speed = speed + 3;
+    }
+
+    if (rects[0].score == 3500){
+      speed = speed - 1;
+    }
+
+    if (rects[0].score == 3700){
+      speed = speed + 4 ;
+    }
+
+    if (rects[0].score == 4000){
+      speed = speed + 2;
+    }
+
+    if (rects[0].score == 4200){
+      speed = speed - 2;
+    }
+
+    if (rects[0].score == 4500){
+      speed = speed - 4;
+    }
+
+    if (rects[0].score == 4900){
+      speed = speed - 2;
+    }
+
+    if (rects[0].score == 5300){
+      speed = speed + 2;
+    }
+
+    if (rects[0].score == 5500){
+      speed = speed + 3;
+    }
+
+    if (rects[0].score == 5900){
+      speed = speed + 2;
+    }
+
+    if (rects[0].score == 6300){
+      speed = speed - 2;
+    }
+
+    if (rects[0].score == 6800){
+      speed = speed - 1;
+    }
+
+    if (rects[0].score == 7100){
+      speed = speed - 2;
+    }
+
+    if (rects[0].score == 7400){
+      speed = speed + 1;
+    }
+
+    if (rects[0].score == 7800){
+      speed = speed - 3;
+    }
+
+    if (rects[0].score == 8300){
+      speed = speed + 3;
+    }
+
+    if (rects[0].score == 8600){
+      speed = speed - 2;
+    }
+
+    if (rects[0].score == 9200){
+      speed = speed + 4;
+    }
+
+    if (rects[0].score == 9500){
+      speed = speed - 1;
+    }
+
+    if (rects[0].score == 10000){
+      speed = speed - 4;
+    }
     
     //////////////////////////////////////////////////////////////
     
