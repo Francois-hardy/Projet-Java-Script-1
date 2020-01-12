@@ -184,7 +184,7 @@ function anime60fps() {
   }
   else{
     ctx.font = "45pt Arial Black";
-    ctx.fillStyle = "green";
+    ctx.fillStyle = "black";
     ctx.strokeStyle = "black";
     ctx.fillText("Pause", canvas.width/3.2, canvas.height/2);
   }
